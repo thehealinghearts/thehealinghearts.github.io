@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="cs" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Healing Hearts</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-cream': '#f9f7f2',
+                        'brand-sage': '#e3e8e1',
+                        'brand-brown': '#5d4037',
+                        'brand-rust': '#d87a55',
+                    },
+                    fontFamily: {
+                        sans: ['Quicksand', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-cream text-brand-brown antialiased selection:bg-brand-rust selection:text-white">
+
+    <nav class="bg-white/90 backdrop-blur-sm shadow-sm fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold tracking-tight hover:text-brand-rust transition-colors">
+                    The Healing Hearts
+                </a>
+
+                <div class="hidden md:flex space-x-8 font-semibold text-lg">
+                    <a href="#about" class="hover:text-brand-rust transition-colors">O nás</a>
+                    <a href="#products" class="hover:text-brand-rust transition-colors">Výrobky</a>
+                    <a href="#contact" class="hover:text-brand-rust transition-colors">Kontakt</a>
+                </div>
+
+                <button id="menu-btn" class="md:hidden text-brand-brown focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden mt-4 flex flex-col space-y-4 font-semibold text-center bg-white p-4 rounded-lg shadow-lg border border-gray-100">
+                <a href="#about" class="block hover:text-brand-rust py-2 border-b border-gray-100">O nás</a>
+                <a href="#products" class="block hover:text-brand-rust py-2 border-b border-gray-100">Výrobky</a>
+                <a href="#contact" class="block hover:text-brand-rust py-2">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative min-h-screen flex flex-col justify-center items-center px-4 text-center"> 
+        <div class="container mx-auto max-w-4xl z-10 relative">
+            <div class="relative inline-block group mb-8">
+                <img src="main-image.png" alt="Ilustrace The Healing Hearts" class="mx-auto w-full max-w-xs md:max-w-md rounded-2xl drop-shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500">
+            </div>
+            
+            <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight text-brand-brown">
+                Tvoříme s láskou pro radost
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto font-medium">
+                Ručně šité doplňky a plyšáci, kteří mají duši.
+            </p>
+        </div>
+
+        <div class="absolute bottom-0 w-full flex justify-center z-20 animate-bounce text-brand-rust">
+            <a href="#about" aria-label="Posunout dolů" class="cursor-pointer hover:opacity-80 transition-opacity p-2">
+                <i class="fas fa-chevron-down text-3xl"></i>
+            </a>
+        </div>
+    </header>
+
+    <section id="about" class="bg-brand-sage py-24 px-4 scroll-mt-20">
+        <div class="container mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl font-bold mb-8 relative inline-block">
+                O nás
+                <span class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-16 h-1 bg-brand-rust rounded-full"></span>
+            </h2>
+            <p class="text-lg md:text-xl text-brand-brown/80 leading-relaxed">
+                Jsme dva nadšenci, kteří věří, že každá věc by měla mít svůj příběh. 
+                Pod značkou <strong class="text-brand-brown">The Healing Hearts</strong> tvoříme originální kousky, 
+                do kterých vkládáme kus sebe. Šití je pro nás relaxace a způsob, 
+                jak předat radost dál.
+            </p>
+        </div>
+    </section>
+
+    <section id="products" class="py-24 px-4 bg-brand-cream scroll-mt-20">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-brand-brown mb-2">Tohle jsme vyrobili</h2>
+                <p class="text-gray-500 uppercase tracking-widest text-sm font-bold">Malá ukázka tvorby</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="h-72 bg-gray-100 overflow-hidden relative">
+                        <img src="kabelka.jpg" alt="Liščí kabelka" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300"></div>
+                    </div>
+                    <div class="p-8 text-center">
+                        <h3 class="text-xl font-bold mb-3">Liščí kabelka</h3>
+                        <p class="text-gray-600 text-sm">Ručně šitá kabelka s motivem lišky.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="h-72 bg-gray-100 overflow-hidden relative">
+                        <img src="makes/panda.jpg" alt="Červená panda" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300"></div>
+                    </div>
+                    <div class="p-8 text-center">
+                        <h3 class="text-xl font-bold mb-3">Červená panda</h3>
+                        <p class="text-gray-600 text-sm">Měkký polštářek a plyšák v jednom.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="h-72 bg-gray-100 overflow-hidden relative">
+                        <img src="medvidek.jpg" alt="Medvídek" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300"></div>
+                    </div>
+                    <div class="p-8 text-center">
+                        <h3 class="text-xl font-bold mb-3">Medvídek</h3>
+                        <p class="text-gray-600 text-sm">Malý kamarád na cesty.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-brand-brown text-white py-20 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Kontakt</h2>
+            <p class="text-xl mb-10 text-white/90">Líbí se vám naše tvorba? Budeme rádi, když se ozvete!</p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-12">
+                <a href="https://www.instagram.com/thehealinghearts3/" target="_blank" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 px-8 py-4 rounded-full transition-all duration-300 border border-white/20">
+                    <i class="fab fa-instagram text-2xl text-brand-rust"></i>
+                    <span class="font-bold">Sledovat na Instagramu</span>
+                </a>
+                
+                <a href="mailto:thehealinghearts3@gmail.com" class="flex items-center gap-3 bg-brand-rust hover:bg-[#c2603d] px-8 py-4 rounded-full transition-all duration-300 shadow-lg shadow-orange-900/20">
+                    <i class="fas fa-envelope text-xl"></i>
+                    <span class="font-bold">Napsat e-mail</span>
+                </a>
+            </div>
+
+            <div class="text-white/40 text-sm mt-16 border-t border-white/10 pt-8">
+                <p>&copy; 2025 The Healing Hearts. Vytvořeno s láskou. ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+        menu.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { menu.classList.add('hidden'); }); });
+    </script>
+</body>
+</html>
